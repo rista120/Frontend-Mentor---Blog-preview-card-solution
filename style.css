@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  /* COLORS */
+  --color-primary: hsl(47, 88%, 63%);
+
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-grey: hsl(0, 0%, 50%);
+  --color-neutral-black: hsl(0, 0%, 7%);
+
+  /* FONTS */
+  --fs-heading: 24px;
+  --fs-body: 16px;
+  --fs-body-s: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-size: var(--fs-body);
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--color-neutral-black);
+  background-color: var(--color-primary);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+h2 {
+  font-size: var(--fs-heading);
+  font-weight: 800;
+}
+
+/** 
+CARD
+**/
+
+.card {
+  background-color: var(--color-neutral-white);
+  padding: 24px;
+  margin: 24px;
+  max-width: 384px;
+  border-radius: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 16px 16px 0 var(--color-neutral-black);
+}
+
+/* img */
+.card > img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+/**
+INFOS
+**/
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+}
+
+/* Button */
+button {
+  background-color: var(--color-primary);
+  font-size: var(--fs-body-s);
+  font-weight: 800;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* date */
+.date {
+  font-size: var(--fs-body-s);
+}
+
+/* link */
+a {
+  text-decoration: none;
+  color: var(--color-neutral-black);
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* description */
+.description {
+  color: var(--color-neutral-grey);
+}
+
+/***
+USER
+***/
+
+.user {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.user > img {
+  width: 32px;
+}
+
+.user p {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 431px) {
+  :root {
+    /* FONTS */
+    --fs-heading: 20px;
+    --fs-body: 14px;
+    --fs-body-s: 12px;
+  }
+
+  .card {
+    box-shadow: 8px 8px 0 var(--color-neutral-black);
+  }
+}
